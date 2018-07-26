@@ -1,5 +1,5 @@
 
-function timestampToTime(timestamp) {
+function timestamp2Time(timestamp) {
     let date = new Date(timestamp);//时间戳为10位需*1000，时间戳为13位的话不需乘1000
     Y = date.getFullYear() + '-';
     M = (date.getMonth()+1 < 10 ? '0'+(date.getMonth()+1) : date.getMonth()+1) + '-';
@@ -10,7 +10,7 @@ function timestampToTime(timestamp) {
     return Y+M+D + " " + h + m + s;
 }
 
-function timestampToDate(timestamp) {
+function timestamp2Date(timestamp) {
     let date = new Date(timestamp);//时间戳为10位需*1000，时间戳为13位的话不需乘1000
     Y = date.getFullYear() + '-';
     M = (date.getMonth()+1 < 10 ? '0'+(date.getMonth()+1) : date.getMonth()+1) + '-';
@@ -19,5 +19,5 @@ function timestampToDate(timestamp) {
 }
 
 
-exports.timestampToTime = timestampToTime;
-exports.timestampToDate = timestampToDate;
+exports.timestamp2Time = timestamp2Time;
+exports.timestamp2Date = timestamp2Date;
